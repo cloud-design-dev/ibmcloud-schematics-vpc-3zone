@@ -4,7 +4,7 @@ variable "zone" {
   default     = ""
 }
 
-variable "resource_group_name" {
+variable "resource_group" {
   type        = string
   description = "Default resource group where resources will be deployed."
   default     = ""
@@ -47,15 +47,15 @@ variable "subnet" {
 
 }
 
-variable "security_group" {
-  description = "ID of the security group to use for instances."
-  type        = string
-  default     = ""
+# variable "security_group" {
+#   description = "ID of the security group to use for instances."
+#   type        = string
+#   default     = ""
 
-}
+# }
 
-variable "type" {
-  description = "Type of instance. Used in naming of instances."
-  type        = string
-  default     = ""
-}
+# variable "type" {
+#   description = "Type of instance. Used in naming of instances."
+#   type        = string
+#   default     = ""
+# }

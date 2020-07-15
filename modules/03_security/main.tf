@@ -1,12 +1,12 @@
 resource "ibm_is_security_group" "z1_bastion_sg" {
   name           = "z1-bastion-sg"
-  resource_group = data.ibm_resource_group.default.id
+  resource_group = data.ibm_resource_group.default_rg.id
   vpc            = data.ibm_is_vpc.vpc.id
 }
 
 resource "ibm_is_security_group" "z1_private_sg" {
   name           = "z1-private-sg"
-  resource_group = data.ibm_resource_group.default.id
+  resource_group = data.ibm_resource_group.default_rg.id
   vpc            = data.ibm_is_vpc.vpc.id
 }
 

@@ -1,16 +1,14 @@
 resource "ibm_is_instance" "instance" {
-  count   = var.instance_count
-  name    = "${var.vpc_name}-${var.type}-${count.index + 1}"
+  name    = "${var.zone}-bastion"
   image   = data.ibm_is_image.default.id
   profile = var.default_instance_profile
 
   primary_network_interface {
-    subnet          = var.subnet
-    security_groups = [var.security_group]
+    subnet = var.subnet
   }
 
-  resource_group = data.ibm_resource_group.default.id
-  tags           = [var.vpc_name, var.zone, var.type]
+  resource_group = data.ibm_resource_group.default_rg.id
+  tags           = [var.vpc_name, var.zone]
 
   vpc       = data.ibm_is_vpc.vpc.id
   zone      = var.zone

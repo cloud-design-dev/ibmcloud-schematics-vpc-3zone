@@ -1,5 +1,5 @@
-data "ibm_resource_group" "default" {
-  name = var.resource_group_name
+data "ibm_resource_group" "default_rg" {
+  name = var.resource_group
 }
 
 data "ibm_is_vpc" "vpc" {

@@ -10,7 +10,7 @@ variable "zone" {
   default     = ""
 }
 
-variable "resource_group_name" {
+variable "resource_group" {
   type        = string
   description = "Default resource group where resources will be deployed."
   default     = ""
