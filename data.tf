@@ -1,5 +1,5 @@
 data "ibm_resource_group" "default_rg" {
-  name = var.resource_group_name
+  name = var.resource_group
 }
 
 data "ibm_is_ssh_key" "ssh_key" {

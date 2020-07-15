@@ -1,8 +1,8 @@
 module "vpc" {
-  source              = "./modules/01_vpc"
-  vpc_name            = var.vpc_name
-  resource_group_name = var.resource_group
-  region              = var.region
+  source         = "./modules/01_vpc"
+  vpc_name       = var.vpc_name
+  resource_group = var.resource_group
+  region         = var.region
 }
 
 module "subnets" {
