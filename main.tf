@@ -6,10 +6,10 @@ module "vpc" {
 }
 
 module "subnets" {
-  source              = "./modules/02_subnets"
-  vpc_name            = module.vpc.name
-  resource_group_name = var.resource_group_name
-  zones               = data.ibm_is_zones.regional_zones.zones
+  source         = "./modules/02_subnets"
+  vpc_name       = module.vpc.name
+  resource_group = var.resource_group
+  region         = var.region
 }
 
 # module "security" {
