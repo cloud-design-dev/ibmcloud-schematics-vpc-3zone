@@ -28,7 +28,7 @@ resource "ibm_is_subnet" "zone1_bastion_subnet" {
   vpc                      = data.ibm_is_vpc.vpc.id
   zone                     = data.ibm_is_zones.regional_zones.zones[0]
   public_gateway           = ibm_is_public_gateway.z1_public_gateway.id
-  total_ipv4_address_count = "28"
+  total_ipv4_address_count = 28
 }
 
 resource "ibm_is_subnet" "zone2_bastion_subnet" {
@@ -37,7 +37,7 @@ resource "ibm_is_subnet" "zone2_bastion_subnet" {
   vpc                      = data.ibm_is_vpc.vpc.id
   zone                     = data.ibm_is_zones.regional_zones.zones[1]
   public_gateway           = ibm_is_public_gateway.z2_public_gateway.id
-  total_ipv4_address_count = "28"
+  total_ipv4_address_count = 28
 }
 
 resource "ibm_is_subnet" "zone3_bastion_subnet" {
@@ -46,5 +46,5 @@ resource "ibm_is_subnet" "zone3_bastion_subnet" {
   vpc                      = data.ibm_is_vpc.vpc.id
   zone                     = data.ibm_is_zones.regional_zones.zones[2]
   public_gateway           = ibm_is_public_gateway.z3_public_gateway.id
-  total_ipv4_address_count = "28"
+  total_ipv4_address_count = 28
 }
