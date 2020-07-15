@@ -40,7 +40,7 @@ resource "ibm_is_public_gateway" "z3_public_gateway" {
   resource_group = data.ibm_resource_group.default_rg.id
   vpc            = data.ibm_is_vpc.vpc.id
   zone           = data.ibm_is_zones.regional_zones.zones[2]
-  tags           = [data.ibm_is_zones.regional_zones.zones[3], "ryantiffany", var.vpc_name]
+  tags           = [data.ibm_is_zones.regional_zones.zones[2], "ryantiffany", var.vpc_name]
 }
 
 resource "ibm_is_subnet" "zone1_bastion_subnet" {
