@@ -1,4 +1,4 @@
-data "ibm_resource_group" "default" {
+data "ibm_resource_group" "default_rg" {
   name = var.resource_group_name
 }
 
@@ -7,3 +7,6 @@ data "ibm_is_ssh_key" "ssh_key" {
 }
 
 
+data "ibm_is_zones" "regional_zones" {
+  region = var.region
+}

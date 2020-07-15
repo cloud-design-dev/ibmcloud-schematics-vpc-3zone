@@ -1,14 +1,14 @@
 output "name" {
-  value = ibm_is_vpc.default_rt_vpc.name
+  value = ibm_is_vpc.prod_vpc.name
 }
 
 output "id" {
-  value = ibm_is_vpc.default_rt_vpc.id
+  value = ibm_is_vpc.prod_vpc.id
 }
 
 
 output "resource_group_name" {
-  value = var.resource_group_name
+  value = var.resource_group
 }
 
 output "zones" {
@@ -20,9 +20,9 @@ output "zone1" {
 }
 
 output "zone2" {
-  value = element(data.ibm_is_zones.region_zones.zones, 0)
+  value = element(data.ibm_is_zones.region_zones.zones, 1)
 }
 
 output "zone3" {
-  value = element(data.ibm_is_zones.region_zones.zones, 0)
+  value = element(data.ibm_is_zones.region_zones.zones, 2)
 }
