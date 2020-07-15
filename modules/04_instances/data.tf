@@ -9,3 +9,7 @@ data "ibm_is_vpc" "vpc" {
 data "ibm_is_image" "default" {
   name = var.default_instance_image
 }
+
+data "ibm_is_ssh_key" "ssh_key" {
+  name = var.ssh_key
+}

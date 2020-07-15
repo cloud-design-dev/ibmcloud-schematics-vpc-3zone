@@ -32,7 +32,7 @@ module "zone2_bastion_instance" {
   vpc_name       = module.vpc.name
   resource_group = var.resource_group
   zone           = data.ibm_is_zones.regional_zones.zones[1]
-  subnet         = module.subnets.zone1_bastion_subnet
+  subnet         = module.subnets.zone2_bastion_subnet
   ssh_key        = var.ssh_key
 }
 
@@ -41,7 +41,7 @@ module "zone3_bastion_instance" {
   vpc_name       = module.vpc.name
   resource_group = var.resource_group
   zone           = data.ibm_is_zones.regional_zones.zones[2]
-  subnet         = module.subnets.zone1_bastion_subnet
+  subnet         = module.subnets.zone3_bastion_subnet
   ssh_key        = var.ssh_key
 }
 
