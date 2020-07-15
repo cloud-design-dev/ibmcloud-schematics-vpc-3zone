@@ -10,7 +10,7 @@ variable "region" {
   default     = ""
 }
 
-variable "ssh_key_name" {
+variable "ssh_key" {
   description = "Name of SSH key already added to VPC."
   type        = string
   default     = ""
