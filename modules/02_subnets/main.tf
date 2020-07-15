@@ -1,24 +1,3 @@
-resource "ibm_is_vpc_address_prefix" "z1_prefix" {
-  name = "z1-prefix"
-  zone = data.ibm_is_zones.regional_zones.zones[0]
-  vpc  = data.ibm_is_vpc.vpc.id
-  cidr = "192.168.0.0/18"
-}
-
-resource "ibm_is_vpc_address_prefix" "z2_prefix" {
-  name = "z2-prefix"
-  zone = data.ibm_is_zones.regional_zones.zones[1]
-  vpc  = data.ibm_is_vpc.vpc.id
-  cidr = "192.168.64.0/18"
-}
-
-resource "ibm_is_vpc_address_prefix" "z3_prefix" {
-  name = "z3-prefix"
-  zone = data.ibm_is_zones.regional_zones.zones[2]
-  vpc  = data.ibm_is_vpc.vpc.id
-  cidr = "192.168.128.0/18"
-}
-
 resource "ibm_is_public_gateway" "z1_public_gateway" {
   name           = "z1-pgw"
   resource_group = data.ibm_resource_group.default_rg.id
