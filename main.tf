@@ -24,7 +24,7 @@ module "zone1_bastion_instance" {
   resource_group = var.resource_group
   zone           = data.ibm_is_zones.regional_zones.zones[0]
   subnet         = module.subnets.zone1_bastion_subnet
-  ssh_key        = var.ssh_key
+  ssh_key        = data.ibm_is_ssh_key.ssh_key.id
 }
 
 module "zone2_bastion_instance" {
@@ -33,7 +33,7 @@ module "zone2_bastion_instance" {
   resource_group = var.resource_group
   zone           = data.ibm_is_zones.regional_zones.zones[1]
   subnet         = module.subnets.zone2_bastion_subnet
-  ssh_key        = var.ssh_key
+  ssh_key        = data.ibm_is_ssh_key.ssh_key.id
 }
 
 module "zone3_bastion_instance" {
@@ -42,7 +42,7 @@ module "zone3_bastion_instance" {
   resource_group = var.resource_group
   zone           = data.ibm_is_zones.regional_zones.zones[2]
   subnet         = module.subnets.zone3_bastion_subnet
-  ssh_key        = var.ssh_key
+  ssh_key        = data.ibm_is_ssh_key.ssh_key.id
 }
 
 # module "floating_ip" {
